@@ -5,3 +5,4 @@ Ferramentas usadas no desenvolvimento do projeto
 Banco de dados MySQL 5.6.41
 Angular JS 1.5.8
 Bootstrap 4.1.3
+JDK: 1.8.0_172
