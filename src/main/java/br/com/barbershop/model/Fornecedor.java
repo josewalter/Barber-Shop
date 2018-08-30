@@ -25,6 +25,9 @@ public class Fornecedor {
 	@Column(name = "forn_bairro", length=25, nullable=false)
 	private String bairro;
 	
+	@Column(name = "forn_cidade", length=25, nullable=false)
+	private String cidade;
+	
 	@Column(name = "forn_nome_", length=20, nullable=false)
 	private String uf;
 	
@@ -46,11 +49,12 @@ public class Fornecedor {
 		
 	}
 	
-    public Fornecedor(String nomeFornecedor, String endereco, String bairro, String uf, String cnpj, String 
+    public Fornecedor(String nomeFornecedor, String endereco, String bairro, String cidade, String uf, String cnpj, String 
     		          telefoneComercial, String celular, String email){
 		this.nomeFornecedor = nomeFornecedor;
 		this.endereco = endereco;
 		this.bairro = bairro;
+		this.cidade = cidade;
 		this.uf = uf;
 		this.cnpj = cnpj;
 		this.telefoneComercial = telefoneComercial;
@@ -90,6 +94,14 @@ public class Fornecedor {
 
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
+	}
+	
+	public String getCidade() {
+		return cidade;
+	}
+
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
 	}
 
 	public String getUf() {
@@ -136,8 +148,8 @@ public class Fornecedor {
 	@Override
 	public String toString() {
 		return "Fornecedor [id=" + id + ", nomeFornecedor=" + nomeFornecedor + ","
-				+ " endereco=" + endereco + ", bairro="	+ bairro + ", uf=" + uf + ","
-				+ " cnpj=" + cnpj + ", telefoneComercial=" + telefoneComercial + ","
+				+ " endereco=" + endereco + ", bairro="	+ bairro + ", cidade= " + cidade + 
+				", uf=" + uf + " cnpj=" + cnpj + ", telefoneComercial=" + telefoneComercial + ","
 				+ " celular=" + celular + ", email=" + email + "]";
 	}
 	
@@ -146,6 +158,7 @@ public class Fornecedor {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((cidade == null) ? 0 : cidade.hashCode());
 		result = prime * result + ((bairro == null) ? 0 : bairro.hashCode());
 		result = prime * result + ((celular == null) ? 0 : celular.hashCode());
 		result = prime * result + ((cnpj == null) ? 0 : cnpj.hashCode());
@@ -167,6 +180,11 @@ public class Fornecedor {
 		if (getClass() != obj.getClass())
 			return false;
 		Fornecedor other = (Fornecedor) obj;
+		if (cidade == null) {
+			if (other.cidade != null)
+				return false;
+		} else if (!cidade.equals(other.cidade))
+			return false;
 		if (bairro == null) {
 			if (other.bairro != null)
 				return false;

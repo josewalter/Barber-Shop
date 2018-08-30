@@ -1,0 +1,78 @@
+<div class="container">
+	   <div class="jumbotron">
+	      <!-- Campos  do formulário de fornecedores -->
+	    	<form>
+				<div class="row">
+					<div class="col-md-12">
+						<label>Nome do Fornecedor: </label> <input type="text"
+							class="form-control"
+							placeholder="Nome do fornecedor" ng-model = "fornecedor.nomeFornecedor"/>
+	                </div>
+	                <div class="col-md-6">
+						<label>Endereço: </label> <input type="text" class="form-control"
+							placeholder="Endereço" ng-model = "fornecedor.endereco"/>
+					</div>
+					<div class="col-md-6">
+						<label>Bairro: </label> <input type="text" class="form-control"
+							placeholder="Bairro" ng-model = "fornecedor.bairro"/>
+					</div>
+					<div class="col-md-6">
+						<label>Cidade: </label> <input type="text"
+							class="form-control"
+							placeholder="Nome da cidade" ng-model = "fornecedor.cidade"/>
+	                </div>
+					<div class="col-md-6">
+						<label>Uf: </label> <input type="text" class="form-control"
+							placeholder="Uf" ng-model = "fornecedor.uf"/>
+					</div>
+					<div class="col-md-6">
+						<label>CNPJ: </label> <input type="text" class="form-control"
+							placeholder="CNPJ" ng-model = "fornecedor.cnpj"/>
+					</div>
+					<div class="col-md-6">
+						<label>Telefone comercial: </label> <input type="text"
+							class="form-control" placeholder="Telefone comercial" ng-model = "fornecedor.telefoneComercial"/>
+					</div>
+					<div class="col-md-6">
+						<label>Celular: </label> <input type="text" class="form-control"
+							placeholder="Celular" ng-model = "fornecedor.celular"/>
+					</div>
+					<div class="col-md-6">
+						<label>Email: </label> <input type="text" class="form-control"
+							placeholder="Email" ng-model = "fornecedor.email"/>
+					</div>
+					<td><button class="btn btn-success" 
+			                    ng-click = "salvarFornecedor()">Salvar</button></td> 
+					<td><button id="alterar" class="btn btn-warning" 
+			                    ng-click = "cancelarAlteracaoFornecedor()">Cancelar</button></td>
+				</div>
+			</form>
+			<!-- Exibe os dados do fornecedor para o usuário em uma tabela -->		  
+		   <table class="table table-striped">
+		      <tr>
+		        <th>Nome do fornecedor</th>
+		        <th>Endereço</th>
+		        <th>Bairro</th>
+		        <th>Uf</th>
+		        <th>CNPJ</th>
+		        <th>Telefone comercial</th>
+		        <th>Celular</th>
+		        <th>Email</th>
+		      </tr>
+		      <tr ng-repeat = "forn in fornecedores">
+                <td>{{forn.nomeFornecedor}}</td>
+                <td>{{forn.endereco}}</td>
+                <td>{{forn.bairro}}</td>
+                <td>{{forn.uf}}</td>
+                <td>{{forn.cnpj}}</td>
+                <td>{{forn.telefoneComercial}}</td>
+                <td>{{forn.celular}}</td>
+                <td>{{forn.email}}</td>	
+                <td><button class="btn btn-danger btn-block" 
+			                ng-click = "excluirFornecedor(forn)">Excluir</button></td>
+			    <td><button class="btn btn-info btn-block" 
+			                ng-click = "alterarFornecedor(forn)">Alterar</button></td>                        	      
+		      </tr>
+		   </table>
+	   </div>
+	</div>
