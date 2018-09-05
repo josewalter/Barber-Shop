@@ -39,7 +39,6 @@ opacity
  
 0;
 }
-}
 .image:nth-child(1) {
 	
 }
@@ -52,3 +51,23 @@ opacity
 	animation-delay: 10s;
 }
 
+.btn-3d {
+	position: relative;
+	top: 6px;
+	border: 0;
+	transitions: all 40ms linear;
+	margin-top: 10px;
+	margin-left: 2px;
+	margin-right: 2px;
+	
+}
+.btn-3d:active:focus,
+.btn-3d:focus:hover,
+.btn-3d:focus {
+	-moz-outline-style: none;
+	outline:medium none
+}
+.btn-3d:active,
+.btn-3d.active{
+	top:2px;
+}
