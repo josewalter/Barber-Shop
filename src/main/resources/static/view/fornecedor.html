@@ -9,51 +9,43 @@
 							   class="form-control" name = "txtNomeFornecedor"  placeholder="Nome do fornecedor"
 							   ng-model = "fornecedor.nomeFornecedor" required/>
 							   <span ng-show = "frmFornecedor.txtNomeFornecedor.$error.riquered && frmFornecedor.txtNomeFornecedor.$dirty">Campo nome obrigatório</span>
-	                           <span ng-show = "frmFornecedor.txtNomeFornecedor.$error.nome">Nome do fornecedor inválido</span>
 	                </div>
 	                <div class="col-md-6">
 						<label>Endereço: </label> <input type="endereco" class="form-control" name = "txtEndereco"
 							placeholder="Endereço" ng-model = "fornecedor.endereco" required/>
 							<span ng-show = "frmFornecedor.txt.$error.riquered && frmFornecedor.txtEndereco.$dirty">Campo endereço obrigatório</span>
-							<span ng-show = "frmFornecedor.txtEndereco.$error.endereco">Endereço inválido</span>
 					</div>
 					<div class="col-md-6">
 						<label>Bairro: </label> <input type="bairro" class="form-control" name = "txtBairro"
 							placeholder="Bairro" ng-model = "fornecedor.bairro" required/>
 							<span ng-show = "frmFornecedor.txtBairro.$error.riquered && frmFornecedor.txtBairro.$dirty">Campo bairro obrigatório</span>
-					        <span ng-show = "frmFornecedor.txtBairro.$error.cidade">Bairro inválido</span>
 					</div>
 					<div class="col-md-6">
 						<label>Cidade: </label> <input type="cidade"
 							   class="form-control" name = "txtCidade" placeholder="Nome da cidade"
 							   ng-model = "fornecedor.cidade" required/>
 							   <span ng-show = "frmFornecedor.txtCidade.$error.riquered && frmFornecedor.txtCidade.$dirty">Campo cidade obrigatório</span>
-							   <span ng-show = "frmFornecedor.txtCidade.$error.cidade">Cidade inválido</span>
-	                </div>
+					</div>
 					<div class="col-md-6">
 						<label>Uf: </label> <input type="uf" class="form-control" name = "txtUf"
 							   placeholder="Uf" ng-model = "fornecedor.uf" required/>
 							   <span ng-show = "frmFornecedor.txtUf.$error.riquered && frmFornecedor.txtUf.$dirty">Campo UF obrigatório</span>
-					           <span ng-show = "frmFornecedor.txtUf.$error.uf">UF inválido</span>
 					</div>
 					<div class="col-md-6">
 						<label>CNPJ: </label> <input type="cnpj" class="form-control" name = "txCnpj"
 							   placeholder="CNPJ" ng-model = "fornecedor.cnpj" required/>
 							   <span ng-show = "frmFornecedor.txtCnpj.$error.riquered && frmFornecedor.txtCnpj.$dirty">Campo CNPJ obrigatório</span>
-							   <span ng-show = "frmFornecedor.txtCnpj.$error.cnpj">CNPJ inválido</span>
 					</div>
 					<div class="col-md-6">
 						<label>Telefone comercial: </label> <input type="telefone" name = "txtTelefone"
 							   class="form-control" placeholder="Telefone comercial"
 							   ng-model = "fornecedor.telefoneComercial" required/>
 							   <span ng-show = "frmFornecedor.txtTelefone.$error.riquered && frmFornecedor.txtTelefone.$dirty">Campo telefone comercial obrigatório</span>
-							   <span ng-show = "frmFornecedor.txtTelefone.$error.telefone">Telefone comercial inválido</span>
 					</div>
 					<div class="col-md-6">
 						<label>Celular: </label> <input type="celular" class="form-control" name = "txtCelular"
 							   placeholder="Celular" ng-model = "fornecedor.celular" required/>
 							   <span ng-show = "frmFornecedor.txtCelular.$error.riquered && frmFornecedor.txtCelular.$dirty">Campo celular obrigatório</span>
-							   <span ng-show = "frmFornecedor.txtCelular.$error.celular">Celular inválido</span>
 					</div>
 					<div class="col-md-6">
 						<label>Email: </label> <input type="email" class="form-control" name = "txEmail"
@@ -62,10 +54,10 @@
 							   <span ng-show = "frmFornecedor.txtEmail.$error.email">Email inválido</span>      
 					</div>
 					<!-- Botão Slavar e botão cancelar -->
-					<td><button id="salvar" class="btn btn-lg btn-success btn-3d" 
-			                    ng-click = "salvarFornecedor()" ng-disabled = "frmFornecedor.$invalid">Salvar</button></td> 
-					<td><button id="cancelar" class="btn btn-lg  btn-warning btn-3d" 
-			                    ng-click = "cancelarAlteracaoFornecedor() " ng-disabled = "frmFornecedor.$invalid">Cancelar</button></td>
+					<button id="salvar" class="btn btn-lg btn-success btn-3d" 
+			                    ng-click = "salvarFornecedor()" ng-disabled = "frmFornecedor.$invalid">Salvar</button> 
+					<button id="cancelar" class="btn btn-lg  btn-warning btn-3d" 
+			                    ng-click = "cancelarAlteracaoFornecedor() " ng-disabled = "frmFornecedor.$invalid">Cancelar</button>
 				</div>
 			</form>
 			<!-- Exibe os dados do fornecedor para o usuário em uma tabela -->		  

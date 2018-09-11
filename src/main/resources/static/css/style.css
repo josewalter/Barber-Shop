@@ -12,9 +12,9 @@
 }
 
 .galeria {
-	margin: 200px auto;
-	width: 1340px;
-	height: 457px;
+	margin: 10px auto;
+	width: 900px;
+	height: 307px;
 	position: relative;
 	overflow: hidden;
 }
@@ -27,27 +27,25 @@
 	animation-iteration-count: infinite;
 }
 
-@
-keyframes animacao { 25%{
-	opacity: 1;
-	transform: scale(1.1, 1.1);
-}
+@keyframes animacao {
+	
+	25%{
+	    opacity: 1;
+	    transform:scale(1.1,1.1);
+    }
 
-50%{
-opacity
-:
- 
-0;
+    50%{
+        opacity: 0;
 }
-.image:nth-child(1) {
+.foto:nth-child(barber shop1) {
 	
 }
 
-.image:nth-child(2) {
+.foto:nth-child(barber shop2) {
 	animation-delay: 5s;
 }
 
-.image:nth-child(3) {
+.foto:nth-child(barber shop3) {
 	animation-delay: 10s;
 }
 
